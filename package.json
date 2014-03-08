@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "description": "my blog",
+  "version": "0.1.0",
+  "author": "benatespina - benatespina@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benatespina/benatespina.github.io"
+  },
+  "license": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/benatespina/benatespina.github.io/blob/master/LICENSE.md"
+    }
+  ],
+  "engines": {
+    "node": "0.10.*",
+    "npm": "1.*"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "jade": "*",
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "pow-mongoose-fixtures": "*"
+  }
+}
