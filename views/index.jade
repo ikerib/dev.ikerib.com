@@ -1,0 +1,19 @@
+include includes/base
+  h1 blog.benatespina.com
+  each post in posts
+    h2 #{post.title}
+    div.createdAt #{(post.createdAt)}
+    div !{post.body}
+    div.updatedAt #{post.updatedAt}
+    h3 Etiketak
+    each tag in post.tags
+      span.tag !{tag.tag}
+    h3 Iruzkinak
+    each comment in post.comments
+      div #{comment.email}
+      div #{comment.body}
+      div.writtenAt #{comment.writtenAt}
+
+  footer
+    include ./templates/footer
+  include ./includes/foot
