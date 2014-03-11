@@ -1,0 +1,19 @@
+.italic    { font-style     : italic; }
+.bold      { font-weight    : bold; }
+.cross-out { text-decoration: line-through; }
+
+body {
+  font: {
+    family: "Gafata", sans-serif;
+    size  : 18px;
+  }
+}
+
+h1, h2 { font-weight: bold; }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 {
+  font-size: 20px;
+  @extend .italic;
+}
+
