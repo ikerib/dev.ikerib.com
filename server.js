@@ -3,6 +3,7 @@
 var express  = require("express"),
     mongoose = require("mongoose"),
     fs       = require("fs"),
+    moment   = require("moment"),
     fixtures = require('pow-mongoose-fixtures');
 
 var db       = mongoose.connect("mongodb://localhost:27017/blog"),
@@ -30,6 +31,9 @@ app.set("view engine", "jade");
 app.set("views", "./views");
 
 app.use(express.static("./public"));
+
+moment.lang("eu");
+app.locals.moment = moment;
 
 fixtures.load(__dirname + '/fixtures', db);
 

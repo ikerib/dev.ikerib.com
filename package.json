@@ -22,7 +22,8 @@
     "mongoose": "*",
     "jade": "*",
     "grunt": "*",
-    "grunt-cli": "*"
+    "grunt-cli": "*",
+    "moment": "*"
   },
   "devDependencies": {
     "pow-mongoose-fixtures": "*",

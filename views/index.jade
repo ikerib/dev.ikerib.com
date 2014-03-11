@@ -2,7 +2,7 @@ include includes/base
   h1 blog.benatespina.com
   each post in posts
     h2 #{post.title}
-    div.createdAt #{(post.createdAt)}
+    div.createdAt #{moment(post.createdAt).format('LLLL')}
     div !{post.body}
     div.updatedAt #{post.updatedAt}
     h3 Etiketak
@@ -12,7 +12,7 @@ include includes/base
     each comment in post.comments
       div #{comment.email}
       div #{comment.body}
-      div.writtenAt #{comment.writtenAt}
+      div.writtenAt #{moment(comment.writtenAt).fromNow()}
 
   footer
     include ./templates/footer
