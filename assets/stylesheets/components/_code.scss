@@ -1,0 +1,19 @@
+.gist .gist-file .gist-data .line-numbers {
+  background-color: $green;
+  border          : 0;
+}
+
+.gist > div.gist-file { border: 0; }
+
+.line-number { color: $yellow; }
+
+.gist-data.gist-syntax > div > table > tbody > tr, .file-data {
+  background-color: $darkGreenishBlue;
+  color           : $lightRed;
+}
+
+.gist-syntax .nt  { color: $lightGreen; }
+.gist-syntax .k   { color: $grayishYellow; }
+.gist-syntax .err { @extend .file-data; }
+
+.gist-meta { display: none; }
