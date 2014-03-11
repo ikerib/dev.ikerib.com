@@ -21,9 +21,18 @@
     "express": "*",
     "mongoose": "*",
     "jade": "*",
-    "lodash": "*"
+    "grunt": "*",
+    "grunt-cli": "*"
   },
   "devDependencies": {
-    "pow-mongoose-fixtures": "*"
+    "pow-mongoose-fixtures": "*",
+    "grunt-mocha-cov": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-nodemon": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-watch": "*"
   }
 }
