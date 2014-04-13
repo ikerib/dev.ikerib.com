@@ -35,3 +35,7 @@ exports.truncate = function (text, initChar, endChar) {
 
   return text;
 };
+
+exports.text = function (string) {
+  return string.replace(/<(\s*\/?)[^>]+>/g, '');
+};
