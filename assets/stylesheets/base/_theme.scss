@@ -21,11 +21,16 @@ article {
   .updatedAt {
     float: center;
   }
+
+  > h1 {
+    margin-top   : 2%;
+    margin-bottom: 5%;
+  }
 }
 aside, footer { text-align: center; }
 
 h3 {
-  margin-top: 2%;
+  margin-top   : 2%;
   margin-bottom: 5px;
 }
 

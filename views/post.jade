@@ -7,7 +7,8 @@ div.wrapper
     div.updatedAt #{post.updatedAt}
     h3 Etiketak
     each tag in post.tags
-      span.tag !{tag.tag}
+      span.tag
+        a(href="/posts/tag/#{tag.tag}") !{tag.tag}
     h3 Iruzkinak
     each comment in post.comments
       div #{comment.email}

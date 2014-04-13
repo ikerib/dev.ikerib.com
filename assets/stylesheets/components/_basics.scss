@@ -9,6 +9,9 @@
   background-color: $gray;
   color           : $white;
   @extend .bold;
+  a {
+    font-style: initial;
+  }
 }
 
 .my-photo > img {
@@ -16,8 +19,8 @@
   border-radius: 5em;
 }
 
-.posts-aside {
-  margin-top: 10em;
+.posts-aside, .tags-aside {
+  margin-top: 5em;
   font-size : 15px;
   text-align: left;
 
@@ -29,5 +32,10 @@
   }
   .post {
     margin-bottom: 3em;
+  }
+
+  .tag {
+    background-color: initial;
+    color: initial;
   }
 }

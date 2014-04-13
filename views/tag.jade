@@ -1,7 +1,8 @@
 include includes/base
 div.wrapper
   article
-    each post in posts
+    h1 #{tag} etiketarekin aurkitutako postak:
+    each post in taggedPosts
       include ./templates/post
   aside
     include ./templates/aside
