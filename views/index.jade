@@ -1,19 +1,18 @@
 include includes/base
-  h1 blog.benatespina.com
-  each post in posts
-    h2 #{post.title}
-    div.createdAt #{moment(post.createdAt).format('LLLL')}
-    div !{post.body}
-    div.updatedAt #{post.updatedAt}
-    h3 Etiketak
-    each tag in post.tags
-      span.tag !{tag.tag}
-    h3 Iruzkinak
-    each comment in post.comments
-      div #{comment.email}
-      div #{comment.body}
-      div.writtenAt #{moment(comment.writtenAt).fromNow()}
-
+div.wrapper
+  article
+    each post in posts
+      h2 #{post.title}
+      div.createdAt #{moment(post.createdAt).format('LLLL')}
+      div.post-body !{post.body}...
+        a(href="/#{post.slug}") (irakurtzen jarraitu)
+      div.tags-wrapper
+        h3 Etiketak
+        each tag in post.tags
+          span.tag !{tag.tag}
+  aside
+    include ./templates/aside
   footer
     include ./templates/footer
-  include ./includes/foot
+
+include ./includes/foot

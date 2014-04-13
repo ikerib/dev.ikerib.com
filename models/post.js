@@ -26,4 +26,8 @@ PostSchema.pre("save", function (next) {
   next();
 });
 
+PostSchema.statics.load = function(slug, cb) {
+  this.findOne({slug: slug}).exec(cb);
+};
+
 mongoose.model("Post", PostSchema);
