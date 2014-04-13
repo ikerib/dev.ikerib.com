@@ -191,7 +191,7 @@ exports.Post = [
     "oso erosoa dena): <strong>LiveReload</strong>. Oso tresna eraginkorra "   +
     "eta baliotsua izan arren zenbait kasutan, bere onetik atera eta gauza "   +
     "arraroak egiten hasten zen.</p>"                                          +
-    "<p><Oso ohikoa zen portuak geldituta eduki arren erabiltzen ari zirela "  +
+    "<p>Oso ohikoa zen portuak geldituta eduki arren erabiltzen ari zirela "  +
     "esatea ondorengo mezuarekin:</p>"                                         +
     "<p><script src='https://gist.github.com/benatespina/bdb4c145fb00bbabf8b9.js?file=liveReload-in-use'></script></p>" +
     "<p>Hau ordenadorea itzali gabe konpontzeko, hurrengo komando honekin "    +

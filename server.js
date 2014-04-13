@@ -15,7 +15,7 @@ var models_path = __dirname + "/models",
         var newPath = path + "/" + file;
         var stat = fs.statSync(newPath);
         if (stat.isFile()) {
-          if (/(.*)\.(js|coffee)/.test(file)) {
+          if (/(.*)\.(js)/.test(file)) {
             require(newPath);
           }
         }
