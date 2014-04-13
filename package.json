@@ -21,6 +21,7 @@
     "express": "*",
     "mongoose": "*",
     "jade": "*",
+    "lodash": "*",
     "grunt": "*",
     "grunt-cli": "*",
     "moment": "*"
