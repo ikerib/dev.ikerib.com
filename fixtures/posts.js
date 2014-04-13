@@ -38,10 +38,10 @@ exports.Post = [
           "sortutako /coverage karpetaren barruan html formatuan.</p>"         +
           "<p><script src='https://gist.github.com/benatespina/07e3010957c339f2f652.js?file=phpunit-coverage.sh'></script></p>",
     tags: [
-      { tag: "<span>symfony</span>" },
-      { tag: "<span>phpunit</span>" },
-      { tag: "<span>php</span>" },
-      { tag: "<span>unit-test</span>" }
+      { tag: "symfony" },
+      { tag: "phpunit" },
+      { tag: "php" },
+      { tag: "unit-test" }
     ],
     comments: [{
       email: "benatespina@gmail.com",
