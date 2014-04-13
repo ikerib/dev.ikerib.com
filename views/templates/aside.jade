@@ -1,0 +1,22 @@
+div.my-photo
+  img(alt="photo", src="img/photo-200x200.png")
+div.about-resume
+  | Kaixo! Beñat Espiña naiz, informatikan ingeniaria den santurtziarra.
+  | Web garapenaren zale amorratua.
+  | Mundu honetan nire eguneroko esperientziei buruzko artikuluak aurkituko dituzu.
+  | Ideia modura:
+div.technologies
+  span.html5
+  span.javascript
+  span.angularjs
+  span.symfony
+  span.nodejs
+  span.mongodb
+  span.compass
+  span.objective-c
+div.posts-aside
+  h3 Aurreko postak
+  each post1 in posts
+    div.createdAt #{moment(post1.createdAt).format('L')}
+    div.post
+      a(href="/#{post1.slug}") #{post1.title}

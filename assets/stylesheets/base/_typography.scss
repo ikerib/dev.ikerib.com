@@ -9,9 +9,22 @@ body {
   }
 }
 
-h1, h2 { font-weight: bold; }
-h1 { font-size: 30px; }
-h2 { font-size: 24px; }
+a {
+  @extend .italic;
+  @extend .bold;
+}
+
+h1 { font-family: Consolas, "Liberation Mono", Courier, monospace; }
+
+h1, h2 {
+  font-size  : 24px;
+  @extend .bold;
+
+  a {
+    font-style: initial;
+  }
+}
+
 h3 {
   font-size: 20px;
   @extend .italic;

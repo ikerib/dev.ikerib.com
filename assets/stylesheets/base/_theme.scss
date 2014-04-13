@@ -6,11 +6,29 @@ p {
   text-indent: 2em;
 }
 
-body {
-  text-align: justify;
+header {
+  background-color: $black;
+  color           : $yellow;
 }
+
+article {
+  text-align: justify;
+
+  .createdAt, .writtenAt {
+    float: right;
+  }
+
+  .updatedAt {
+    float: center;
+  }
+}
+aside, footer { text-align: center; }
 
 h3 {
   margin-top: 2%;
   margin-bottom: 5px;
+}
+
+.tags-wrapper {
+  margin-bottom: 3em;
 }

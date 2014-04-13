@@ -1,0 +1,33 @@
+.post-body {
+  margin-top: 5%;
+}
+
+.tag {
+  border-radius   : 3px;
+  margin          : 2px;
+  padding         : 1px 5px 1px 5px;
+  background-color: $gray;
+  color           : $white;
+  @extend .bold;
+}
+
+.my-photo > img {
+  width        : 75%;
+  border-radius: 5em;
+}
+
+.posts-aside {
+  margin-top: 10em;
+  font-size : 15px;
+  text-align: left;
+
+  .createdAt, .post {
+    float: left;
+  }
+  .createdAt {
+      font-size: 17px;
+  }
+  .post {
+    margin-bottom: 3em;
+  }
+}
