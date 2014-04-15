@@ -1,3 +1,4 @@
 @import "compass/reset";
+@import "helpers/variables";
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: $grayishYellow; }
