@@ -10,7 +10,10 @@ header {
   margin-right: 10%;
 
   article, aside, footer { margin-bottom: 1em; }
-  article, aside         { float: left; }
-  article                { width: 75%; margin-right: 2.5%; }
-  aside                  { width: 20%; margin-left : 2.5%; }
+  article, aside { float: left; }
+
+  div.social-bar { float: right; }
+
+  article { width: 75%; margin-right: 2.5%; }
+  aside { width: 20%; margin-left : 2.5%; }
 }
