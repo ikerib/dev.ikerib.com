@@ -13,11 +13,6 @@ var PostSchema = mongoose.Schema({
   updatedAt  : { type: Date },
   tags: [{
     tag: String
-  }],
-  comments: [{
-    email     : { type: String, required: true, lowercase: true },
-    body      : { type: String, required: true },
-    writtenAt : { type: Date, default: Date.now() }
   }]
 });
 

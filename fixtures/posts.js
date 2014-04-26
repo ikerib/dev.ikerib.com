@@ -42,32 +42,7 @@ exports.Post = [
       { tag: "phpunit" },
       { tag: "php" },
       { tag: "unit-test" }
-    ],
-    comments: [{
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }]
+    ]
   }, {
     title: "Error: couldn't connect to server MongoDB-n",
     body : "<p>Gaur, proiektu berri batekin hastera nihoan, MongoDB "          +
@@ -95,32 +70,7 @@ exports.Post = [
       { tag: "mongodb" },
       { tag: "nosql" },
       { tag: "osx" },
-    ],
-    comments: [{
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }]
+    ]
   }, {
     title: "Composer install VS composer update",
     body : "<p>PHP-k duen tresna <span class='cross-out'>hoberena</span> "     +
@@ -156,32 +106,7 @@ exports.Post = [
     tags: [
       { tag: "composer" },
       { tag: "php" }
-    ],
-    comments: [{
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }]
+    ]
   }, {
     title: "Arazoak LiveReload erabiltzerakoan",
     body : "<p>Nire azkenengo proiektua <a href='http://nodejs.org'>NodeJS</a>"+
@@ -203,31 +128,6 @@ exports.Post = [
       { tag: "live-reload" },
       { tag: "nodejs" },
       { tag: "gruntjs" }
-    ],
-    comments: [{
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }, {
-      email: "benatespina@gmail.com",
-      body : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi " +
-        "non, iste, atque perferendis autem dolorum tenetur repellat "         +
-        "consequatur fugit voluptate fuga eveniet ratione veniam dolore "      +
-        "reiciendis nam enim modi quod!"
-    }]
+    ]
   },
 ];
