@@ -2,7 +2,10 @@ include includes/base
 div.wrapper
   article
     h2 #{post.title}
-    div.createdAt #{moment(post.createdAt).format('LLLL')}
+    div.createdAt
+      span.clock-icon
+      &nbsp;
+      span #{moment(post.createdAt).format('LLLL')}
     div.post-body !{post.body}
     div.updatedAt #{post.updatedAt}
     div.social-bar
@@ -12,11 +15,16 @@ div.wrapper
       span.st_linkedin_large(st_title='#{post.title}')
       span.st_meneame_large(st_title='#{post.title}')
       span.st_reddit_large(st_title='#{post.title}')
-    h3 Etiketak
+    h3
+      span.tag-icon
+      span ETIKETAK
     each tag in post.tags
       span.tag
         a(href="/posts/tag/#{tag.tag}") !{tag.tag}
-    h3 Iruzkinak
+    div.comments-container
+      h3
+        span.bubbles-icon
+        span IRUZKINAK
       #disqus_thread
         script.
             var disqus_shortname = 'blogbenatespina';

@@ -16,10 +16,15 @@ article {
 
   .createdAt, .writtenAt {
     float: right;
+    display: flex;
   }
 
   .updatedAt {
     float: center;
+  }
+
+  .comments-container {
+    margin-top: 3em;
   }
 
   > h1 {

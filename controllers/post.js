@@ -92,4 +92,41 @@ exports.tag = function(req, res) {
       });
     }
   });
-}
+};
+
+// Administration
+exports.create = function (req, res) {
+  var post = new Post(req.body);
+
+  post.save(function (err) {
+    if (err) {
+      return res.send(500, err);
+    }
+    return res.send(200, "The post has been created properly");
+  });
+};
+
+exports.update = function (req, res) {
+  var post = req.post;
+
+  post           = _.extend(post, req.body);
+  post.updatedAt = Date.now();
+
+  post.save(function (err) {
+    if (err) {
+      return res.send(500, err);
+    }
+    return res.send(200, "The post has been updated properly");
+  });
+};
+
+exports.delete = function (req, res) {
+  var post = req.post;
+
+  post.remove(function (err) {
+    if (err) {
+      return res.send(500, err);
+    }
+    return res.send(200, "The post has been deleted properly");
+  });
+};

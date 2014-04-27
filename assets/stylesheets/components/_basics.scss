@@ -15,11 +15,16 @@
   }
 }
 
-.my-photo > img {
-  width        : 75%;
-  border-radius: 5em;
-}
+.about-me {
+  background-color: $lightGray;
+  border-radius: 10px;
+  padding: 5%;
 
+  .my-photo > img {
+    width        : 75%;
+    border-radius: 5em;
+  }
+}
 .posts-aside, .tags-aside {
   margin-top: 5em;
   font-size : 15px;
