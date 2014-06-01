@@ -1,0 +1,22 @@
+include ./../includes/base
+head
+  link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+body
+  .container
+    .col-sm-6.col-sm-offset-3
+      if (message.length > 0)
+        div.alert.alert-danger #{message}
+      form(action='/login', method='post')
+        .form-group
+          label Posta elektronikoa
+          input.form-control(type='text', name='email')
+        .form-group
+          label Pasahitza
+          input.form-control(type='password', name='password')
+        button.btn.btn-warning.btn-lg(type='submit') Sartu
+      p
+      | Edota
+      a(href='/')  hasierara
+      |  joan
+
+include ./../includes/foot
