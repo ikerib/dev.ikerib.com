@@ -1,11 +1,10 @@
-"use strict";
+'use strict';
 
-var Post    = require("./controllers/post"),
-    Comment = require("./controllers/comment");
+var Post = require('./controllers/post');
 
-module.exports = function (app) {
+module.exports = function (app, passport) {
   app.get("/", Post.all);
-  app.get("/:postSlug", Post.show);
+  app.get("/posts/:postSlug", Post.show);
   app.get('/posts/tag/:tag', Post.tag);
 
   app.param('postSlug', Post.post);

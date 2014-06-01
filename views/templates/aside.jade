@@ -33,4 +33,4 @@ div.posts-aside
   each post in posts
     div.createdAt #{moment(post.createdAt).format('L')}
     div.post
-      a(href="/#{post.slug}") #{post.title}
+      a(href="/posts/#{post.slug}") #{post.title}

@@ -4,7 +4,7 @@ div.createdAt
   &nbsp;
   span #{moment(post.createdAt).format('LLLL')}
 div.post-body !{post.body}...
-  a(href="/#{post.slug}") (irakurtzen jarraitu)
+  a(href="/posts/#{post.slug}") (irakurtzen jarraitu)
 div.tags-wrapper
   h3
     span.tag-icon

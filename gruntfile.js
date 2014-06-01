@@ -83,16 +83,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    mochacov: {
-      test: {
-        options: {
-          reporter: "spec"
-        }
-      },
-      options: {
-        files: "test/*.js"
-      }
-    },
     concurrent: {
       tasks: ["nodemon:dev", "watch"],
       options: {
