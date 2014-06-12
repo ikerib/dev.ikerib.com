@@ -17,3 +17,16 @@ header {
   article { width: 75%; margin-right: 2.5%; }
   aside { width: 20%; margin-left : 2.5%; }
 }
+
+div.dashboard-table {
+  ul.wrapper-title, ul.wrapper-row {
+    @include display-flex();
+    justify-content: center;
+    > li.item-title, li.item-row {
+      @include flex(1 10%);
+    }
+    > li.item-title-tag, li.item-row-tag {
+      @include flex(2);
+    }
+  }
+}
