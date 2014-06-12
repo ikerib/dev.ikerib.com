@@ -1,0 +1,22 @@
+include ./../includes/base
+
+form(action=post ? '/update-post': '/create-post', method=post ? 'put': 'post')
+  .form-group
+    label Titulua
+    input.form-control(type='text', name='title', value=post ? post.title: '')
+  .form-group
+    label Edukia
+    textarea(name='body')
+      if post
+        | #{post.body}
+  .form-group
+    label Etiketak
+    textarea(name='tag')
+      if post
+        each tag, i in post.tags
+          if i === post.tags.length-1
+            | #{tag.tag}
+          else
+            | #{tag.tag},&nbsp;
+  button(type='submit') Gehitu
+include ./../includes/foot

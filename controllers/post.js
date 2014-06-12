@@ -6,7 +6,7 @@ var mongoose    = require("mongoose"),
     validations = require("../utils/validations");
 
 var _tags = function (posts) {
-  var i, j, k = 0, postsLength, tagsLength, tags = new Array();
+  var i, j, k = 0, postsLength, tagsLength, tags = [];
 
   for (i = 0, postsLength = posts.length; i < postsLength; i++) {
     for (j = 0, tagsLength = posts[i].tags.length; j < tagsLength; j++) {
@@ -95,20 +95,34 @@ exports.tag = function(req, res) {
 };
 
 // Administration
+
+exports.manage = function (req, res) {
+  if (!req.params) {
+    res.render('admin/create');
+  }
+  
+  res.render('admin/create', { post: req.post });
+};
+
 exports.create = function (req, res) {
+
+  var _tags = req.body.tag.split(/[ ,]+/);
   var post = new Post(req.body);
+ 
+  for (var i = 0, length = _tags.length; i < length; i++) {
+    post.tags.push({ tag: _tags[i] });
+  }
 
   post.save(function (err) {
     if (err) {
       return res.send(500, err);
     }
-    return res.send(200, "The post has been created properly");
+    res.redirect('/dashboard');
   });
 };
 
 exports.update = function (req, res) {
   var post = req.post;
-
   post           = _.extend(post, req.body);
   post.updatedAt = Date.now();
 
@@ -116,7 +130,7 @@ exports.update = function (req, res) {
     if (err) {
       return res.send(500, err);
     }
-    return res.send(200, "The post has been updated properly");
+    res.redirect('/dashboard');
   });
 };
 

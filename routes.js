@@ -19,6 +19,15 @@ module.exports = function (app, passport) {
     failureRedirect: '/login',
     failureFlash   : true
   }));
-  app.get('/dashboard', User.isLoggedIn, User.dashboard);
   app.get('/logout', User.logout);
+
+  
+  
+  app.get('/dashboard', User.isLoggedIn, User.dashboard, Post.all);
+  
+  app.get('/artikuluak/berria', User.isLoggedIn, Post.manage);
+  app.post('/create-post', User.isLoggedIn, Post.create);
+  
+  app.get('/artikuluak/editatu/:postSlug', User.isLoggedIn, Post.manage);
+  app.put('/update-post', User.isLoggedIn, Post.update);
 };

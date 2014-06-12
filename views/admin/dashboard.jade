@@ -1,4 +1,31 @@
 include ./../includes/base
-div.wrapper Barruan, kaixo #{user.email}
+head
+  link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+  link(rel="stylesheet", href="/main.min.css")
+body
+  p
+  | Kaixo #{user.email}
+  a(href='/logout')
+    i.glyphicon.glyphicon-off
+  a(href='/artikuluak/berria')
+    i.glyphicon.glyphicon-plus
+  div.dashboard-table
+    ul.wrapper-title
+      li.item-title Titulua
+      li.item-title Data
+      li.item-title-tag Etiketak
+      li.item-title Ekintzak
+    each post in posts
+      ul.wrapper-row
+        li.item-row #{post.title}
+        li.item-row #{moment(post.createdAt).format('L')}
+        li.item-row-tag
+          each tag in post.tags
+            a(href="/posts/tag/#{tag.tag}") !{tag.tag} &nbsp;
+        li.item-row
+          a(href="/artikuluak/editatu/#{post.slug}")
+            i.glyphicon.glyphicon-edit &nbsp;
+          a(href="/artikuluak/ezabatu/#{post.slug}")
+            i.glyphicon.glyphicon-trash
 
-a(href='/logout') Saioa itxi 
+include ./../includes/foot
