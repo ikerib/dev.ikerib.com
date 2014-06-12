@@ -4,6 +4,9 @@ var mongoose    = require("mongoose"),
     validations = require("../utils/validations"),
     Schema      = mongoose.Schema;
 
+var TagSchema = new Schema({
+    tag : String
+});
 
 var PostSchema = mongoose.Schema({
   title      : { type: String, required: true, trim : true, index : true },
@@ -11,9 +14,9 @@ var PostSchema = mongoose.Schema({
   slug       : { type: String },
   createdAt  : { type: Date, default: Date.now() },
   updatedAt  : { type: Date },
-  tags: [{
-    tag: String
-  }]
+  tags: [
+    TagSchema
+  ]
 });
 
 PostSchema.pre("save", function (next) {
