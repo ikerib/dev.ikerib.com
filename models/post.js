@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
-var mongoose    = require("mongoose"),
-    validations = require("../utils/validations"),
-    Schema      = mongoose.Schema;
+var mongoose = require('mongoose'),
+    Utils    = require('../utils/utilities'),
+    Schema   = mongoose.Schema;
 
 var TagSchema = new Schema({
     tag : String
@@ -19,8 +19,8 @@ var PostSchema = mongoose.Schema({
   ]
 });
 
-PostSchema.pre("save", function (next) {
-  this.slug = validations.slugify(this.title);
+PostSchema.pre('save', function (next) {
+  this.slug = Utils.slugify(this.title);
   next();
 });
 
@@ -28,4 +28,4 @@ PostSchema.statics.load = function(slug, cb) {
   this.findOne({slug: slug}).exec(cb);
 };
 
-mongoose.model("Post", PostSchema);
+mongoose.model('Post', PostSchema);

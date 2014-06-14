@@ -1,11 +1,12 @@
 'use strict';
 
-var Post = require('./controllers/post'),
-    User = require('./controllers/user');
+var Post  = require('./controllers/post'),
+    User  = require('./controllers/user'),
+    Admin = require('./controllers/admin');
 
 module.exports = function (app, passport) {
-  app.get("/", Post.all);
-  app.get("/posts/:postSlug", Post.show);
+  app.get('/', Post.all);
+  app.get('/posts/:postSlug', Post.show);
   app.get('/posts/tag/:tag', Post.tag);
   
   
@@ -20,13 +21,13 @@ module.exports = function (app, passport) {
   
   app.get('/dashboard', User.isLoggedIn, User.dashboard, Post.all);
   
-  app.get('/artikuluak/berria', User.isLoggedIn, Post.manage);
-  app.post('/create-post', User.isLoggedIn, Post.create);
+  app.get('/artikuluak/berria', User.isLoggedIn, Admin.manage);
+  app.post('/create-post', User.isLoggedIn, Admin.create);
   
-  app.get('/artikuluak/editatu/:postSlug', User.isLoggedIn, Post.manage);
-  app.post('/update-post/:postSlug', User.isLoggedIn, Post.update);
+  app.get('/artikuluak/editatu/:postSlug', User.isLoggedIn, Admin.manage);
+  app.post('/update-post/:postSlug', User.isLoggedIn, Admin.update);
   
-  app.get('/delete-post/:postSlug', User.isLoggedIn, Post.delete);
+  app.get('/delete-post/:postSlug', User.isLoggedIn, Admin.delete);
   
   
   app.param('postSlug', Post.post);

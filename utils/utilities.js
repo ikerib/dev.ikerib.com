@@ -1,3 +1,7 @@
+'use strict';
+
+var _ = require('lodash');
+
 exports.isEmail = function (value) {
   (/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
   .test(value);
@@ -38,4 +42,17 @@ exports.truncate = function (text, initChar, endChar) {
 
 exports.text = function (string) {
   return string.replace(/<(\s*\/?)[^>]+>/g, '');
+};
+
+exports.extractTags = function (posts) {
+  var i, j, k = 0, postsLength, tagsLength, tags = [];
+
+  for (i = 0, postsLength = posts.length; i < postsLength; i++) {
+    for (j = 0, tagsLength = posts[i].tags.length; j < tagsLength; j++) {
+      tags[k] = posts[i].tags[j].tag;
+      k++;
+    }
+  }
+  
+  return _.uniq(tags);
 };
