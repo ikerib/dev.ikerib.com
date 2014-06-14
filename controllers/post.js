@@ -123,7 +123,15 @@ exports.create = function (req, res) {
 
 exports.update = function (req, res) {
   var post = req.post;
+  var _tags = req.body.tag.split(/[ ,]+/);
+  console.log(req.post);
   post           = _.extend(post, req.body);
+  post.tags = [];
+  
+  for (var i = 0, length = _tags.length; i < length; i++) {
+    post.tags.push({ tag: _tags[i] });
+  }
+  
   post.updatedAt = Date.now();
 
   post.save(function (err) {
@@ -141,6 +149,6 @@ exports.delete = function (req, res) {
     if (err) {
       return res.send(500, err);
     }
-    return res.send(200, "The post has been deleted properly");
+    res.redirect('/dashboard');
   });
 };

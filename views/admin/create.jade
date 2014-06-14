@@ -1,6 +1,6 @@
 include ./../includes/base
 
-form(action=post ? '/update-post': '/create-post', method=post ? 'put': 'post')
+form(action=post ? '/update-post/#{post.slug}': '/create-post', method='post')
   .form-group
     label Titulua
     input.form-control(type='text', name='title', value=post ? post.title: '')

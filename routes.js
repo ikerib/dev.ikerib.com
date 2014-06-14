@@ -7,10 +7,6 @@ module.exports = function (app, passport) {
   app.get("/", Post.all);
   app.get("/posts/:postSlug", Post.show);
   app.get('/posts/tag/:tag', Post.tag);
-
-  app.param('postSlug', Post.post);
-  app.param('postSlug', Post.posts);
-  app.param('tag', Post.posts);
   
   
   app.get('/login', User.login);
@@ -20,7 +16,6 @@ module.exports = function (app, passport) {
     failureFlash   : true
   }));
   app.get('/logout', User.logout);
-
   
   
   app.get('/dashboard', User.isLoggedIn, User.dashboard, Post.all);
@@ -29,5 +24,12 @@ module.exports = function (app, passport) {
   app.post('/create-post', User.isLoggedIn, Post.create);
   
   app.get('/artikuluak/editatu/:postSlug', User.isLoggedIn, Post.manage);
-  app.put('/update-post', User.isLoggedIn, Post.update);
+  app.post('/update-post/:postSlug', User.isLoggedIn, Post.update);
+  
+  app.get('/delete-post/:postSlug', User.isLoggedIn, Post.delete);
+  
+  
+  app.param('postSlug', Post.post);
+  app.param('postSlug', Post.posts);
+  app.param('tag', Post.posts);
 };
