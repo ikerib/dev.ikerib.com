@@ -8,20 +8,19 @@
   padding         : 1px 5px 1px 5px;
   background-color: $gray;
   color           : $white;
-  @extend .bold;
   a {
     font-style: initial;
-    color: inherit;
+    color     : inherit;
   }
 }
 
 .about-me {
   background-color: $lightGray;
-  border-radius: 10px;
-  padding: 5%;
+  border-radius   : 10px;
+  padding         : 5%;
 
   .my-photo > img {
-    width        : 75%;
+    width        : 60%;
     border-radius: 5em;
   }
 }
@@ -29,19 +28,23 @@
   margin-top: 5em;
   font-size : 15px;
   text-align: left;
-
-  .createdAt, .post {
-    float: left;
-  }
-  .createdAt {
-      font-size: 17px;
-  }
-  .post {
-    margin-bottom: 3em;
-  }
-
-  .tag {
-    background-color: initial;
-    color: initial;
+  .tags-wrapper, .posts-wrapper {
+    padding-left: 10%;
+    > .tag-wrapper, .post-wrapper {
+      border-left: 1px dotted $darkGreenishBlue;
+      .tag {
+        background-color: initial;
+        color           : initial;
+      }
+      .post, .createdAt {
+        padding-left: 3%;
+      }
+      .post {
+        margin-bottom: 2em;
+      }
+      .createdAt {
+        font-size: 17px;
+      }
+    }
   }
 }

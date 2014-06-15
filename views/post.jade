@@ -6,8 +6,9 @@ div.wrapper
       span.clock-icon
       &nbsp;
       span #{moment(post.createdAt).format('LLLL')}
+      if post.updatedAt
+        span #{moment(post.updatedAt).calendar()} editatua.
     div.post-body !{post.body}
-    div.updatedAt #{post.updatedAt}
     div.social-bar
       span.st_twitter_large(st_title='#{post.title}', st_via='benatespina')
       span.st_facebook_large(st_title='#{post.title}')
@@ -17,10 +18,9 @@ div.wrapper
       span.st_reddit_large(st_title='#{post.title}')
     h3
       span.tag-icon
-      span ETIKETAK
-    each tag in post.tags
-      span.tag
-        a(href="/posts/tag/#{tag.tag}") !{tag.tag}
+      each tag in post.tags
+        span.tag
+          a(href="/posts/tag/#{tag.tag}") !{tag.tag}
     div.comments-container
       h3
         span.bubbles-icon

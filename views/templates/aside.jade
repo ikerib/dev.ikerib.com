@@ -2,14 +2,15 @@ div.about-me
   div.my-photo
     img(alt="photo", src="/img/photo-200x200.png")
   div.about-resume
-    | Kaixo! Beñat Espiña naiz, informatikan ingeniaria den santurtziarra.
-    | Web garapenaren zale amorratua.
-    | Mundu honetan nire eguneroko esperientziei buruzko artikuluak aurkituko
-    | dituzu. Niri buruz zerbait gehiago jakin nahi izatekotan nire
-    a(href="http://benatespina.com", target="_blank")  webgune
-    |  pertsonalean aurkitu dezakezu.
-    | e
-    | Jorratuko ditudan gaien artean:
+    p
+      | Kaixo! Beñat Espiña naiz, informatikan ingeniaria den santurtziarra.
+      | Web garapenaren zale amorratua.
+    p
+      | Mundu honetan nire eguneroko esperientziei buruzko artikuluak aurkituko
+      | dituzu. Niri buruz zerbait gehiago jakin nahi izatekotan nire
+      a(href="http://benatespina.com", target="_blank")  webgune
+      |  pertsonalean aurkitu dezakezu.
+    | Jorratzen ditudan gaien artean:
   div.technologies
     span.html5
     span.javascript
@@ -23,14 +24,18 @@ div.tags-aside
   h3
     span.tag-icon
     span ETIKETAK
-  each tag in tags
-    div.tag
-      a(href="/posts/tag/#{tag}") !{tag}
+  div.tags-wrapper
+    div.tag-wrapper
+      each tag in tags
+        div.tag
+          a(href="/posts/tag/#{tag}") !{tag}
 div.posts-aside
   h3
     span.posts-icon
     span Aurreko postak
-  each post in posts
-    div.createdAt #{moment(post.createdAt).format('L')}
-    div.post
-      a(href="/posts/#{post.slug}") #{post.title}
+  div.posts-wrapper
+    div.post-wrapper
+      each post in posts
+        div.createdAt #{moment(post.createdAt).format('L')}
+        div.post
+          a(href="/posts/#{post.slug}") #{post.title}

@@ -1,16 +1,20 @@
+.gist-data.gist-syntax > div > table > tbody > tr, .file-data {
+  background-color: $darkGreenishBlue !important;
+  color           : $lightRed !important;
+  line-height     : normal !important;
+  font-size       : 0.9em;
+}
+
 .gist .gist-file .gist-data .line-numbers {
   background-color: $green !important;
   border          : 0 !important;
+  line-height     : inherit;
+  font-size       : inherit;
 }
 
 .gist > div.gist-file { border: 0 !important; }
 
 .line-number { color: $yellow !important; }
-
-.gist-data.gist-syntax > div > table > tbody > tr, .file-data {
-  background-color: $darkGreenishBlue !important;
-  color           : $lightRed !important;
-}
 
 .gist-syntax .nt  { color: $lightGreen !important; }
 .gist-syntax .k   { color: $grayishYellow !important; }
