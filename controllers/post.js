@@ -1,8 +1,9 @@
 'use strict';
 
-var mongoose    = require('mongoose'),
-    Post        = mongoose.model('Post'),
-    Utils = require('../utils/utilities');
+var mongoose = require('mongoose'),
+    Post     = mongoose.model('Post'),
+    Utils    = require('../utils/utilities'),
+    Feed     = require('feed');
 
 exports.posts = function (req, res, next) {
   Post.find().sort('-created').exec(function (err, posts) {
@@ -78,5 +79,41 @@ exports.tag = function(req, res) {
           tag: req.params.tag
         });
       }
+  });
+};
+
+
+exports.feed = function (req, res) {
+  var feed, i, j, length;
+  
+  feed = new Feed({
+    title      : 'blog.benatespina',
+    description: 'My personal blog where I talk about development in basque',
+    link       : 'http://blog.benatespina.com/',
+    copyright  : 'All rights reserved 2014, @benatespina',
+    author     : {
+      name : 'Beñat Espiña',
+      email: 'benatespina@gmail.com',
+      link : 'http://benatespina.com'
+    }
+  });
+  
+  Post.find().sort('-created').exec(function (err, posts) {
+    if (err) {
+      res.render(err, {
+        status: 500
+      });
+    }
+    for (i = 0, length = posts.length; i < length; i++) {
+      feed.addItem({
+        title      : posts[i].title,
+        link       : 'http://blog.benatespina.com/' + posts[i].slug,
+        description: posts[i].body,
+        date       : posts[i].createdAt
+      });
+    }
+    
+    res.set('Content-Type', 'text/xml');
+    res.send(feed.render('atom-1.0'));
   });
 };

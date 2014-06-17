@@ -9,6 +9,8 @@ module.exports = function (app, passport) {
   app.get('/posts/:postSlug', Post.show);
   app.get('/posts/tag/:tag', Post.tag);
   
+  app.get('/feed', Post.feed);
+  
   
   app.get('/login', User.login);
   app.post('/login', passport.authenticate('local-login', {
