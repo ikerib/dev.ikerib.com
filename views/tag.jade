@@ -1,11 +1,12 @@
 include includes/base
-div.wrapper
-  article
-    h1 #{tag} etiketarekin aurkitutako postak:
-    each post in taggedPosts
-      include ./templates/post
-  aside
-    include ./templates/aside
+container
+  div.wrapper
+    article
+      h1 #{tag} etiketarekin aurkitutako postak:
+      each post in taggedPosts
+        include ./templates/post
+    aside
+      include ./templates/aside
   footer
     include ./templates/footer
 

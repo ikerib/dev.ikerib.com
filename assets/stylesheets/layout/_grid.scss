@@ -3,60 +3,69 @@ header {
   padding      : 2em;
   margin-bottom: 3%;
 }
-
-.wrapper {
+container {
   max-width: 1300px;
-  margin   : 0 10%;
-  @include display-flex();
-  @include justify-content(center);
-  align-content: center;
-  article, aside, footer { 
-    margin-bottom: 1em;
-  }
-  article { 
-    @include flex(4);
-    margin-right: 2.5%;
-    div.post-options-container {
-      @include display-flex();
-      > h3 {
-        @include flex(1);
+  .wrapper {
+    margin: 0 10%;
+    @include display-flex();
+    @include justify-content(center);
+    align-content: center;
+    article, aside, footer { 
+      margin-bottom: 1em;
+    }
+    article { 
+      @include flex(4);
+      margin-right: 2.5%;
+      div.post-options-container {
+        @include display-flex();
+        > h3 {
+          @include flex(1);
+        }
+      }
+    }
+    aside {
+      @include flex(1);
+      margin-left: 2.5%;
+      div.dashboard-table {
+        ul.wrapper-title, ul.wrapper-row {
+          @include display-flex();
+          justify-content: center;
+          > li.item-title, li.item-row {
+            @include flex(1 10%);
+          }
+          > li.item-title-tag, li.item-row-tag {
+            @include flex(2);
+          }
+        }
       }
     }
   }
-  aside {
-    @include flex(1);
-    margin-left: 2.5%;
-    div.dashboard-table {
-      ul.wrapper-title, ul.wrapper-row {
-        @include display-flex();
-        justify-content: center;
-        > li.item-title, li.item-row {
-          @include flex(1 10%);
-        }
-        > li.item-title-tag, li.item-row-tag {
-          @include flex(2);
-        }
-      }
+  footer {
+    > .my-social-container {
+      padding-top: 3em;
+      background: linear-gradient($white, $lightGray)
     }
   }
 }
 
 
 @include mq($from: mobile, $to: desktop) {
-  .wrapper {
-    display: initial;
-    > aside {
-      @include display-flex();
-      @include flex-wrap(wrap);
-      > div.about-me > div.my-photo > img {
-        width: inherit;
+  container {
+    .wrapper {
+      display: inherit;
+      > aside {
+        @include display-flex();
+        @include flex-wrap(wrap);
+        > div.about-me > div.my-photo > img {
+          width: inherit;
+        }
+        .tags-aside, .posts-aside {
+          @include flex(1);
+        }
       }
-      .tags-aside, .posts-aside {
-        @include flex(1);
+      > aside, > article {
+        margin: 5%;
       }
-    }
-    > aside, > article {
-      margin: 5%;
     }
   }
 }
