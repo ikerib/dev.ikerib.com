@@ -39,7 +39,7 @@
 .feed-icon {
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTE2IDBjLTguODM3IDAtMTYgNy4xNjMtMTYgMTZzNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTYtNy4xNjMtMTYtMTYtMTZ6TTEwIDI0Yy0xLjEwNSAwLTItMC44OTUtMi0yczAuODk1LTIgMi0yIDIgMC44OTUgMiAyLTAuODk1IDItMiAyek0xNS41IDI0YzAtNC4xMzYtMy4zNjQtNy41LTcuNS03LjV2LTNjNS43OSAwIDEwLjUgNC43MSAxMC41IDEwLjVoLTN6TTIxLjUgMjRjMC0zLjYwNi0xLjQwNC02Ljk5Ni0zLjk1NC05LjU0Ni0yLjU1LTIuNTUtNS45NC0zLjk1NC05LjU0Ni0zLjk1NHYtM2M0LjQwNyAwIDguNTUxIDEuNzE2IDExLjY2NyA0LjgzMyAzLjExNiAzLjExNiA0LjgzMyA3LjI2IDQuODMzIDExLjY2N2gtM3oiLz48L3N2Zz4=) no-repeat center center;
 }
-.pencil-icon {
+.edit-icon {
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcidmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjcgMGMyLjc2MSAwIDUgMi4yMzkgNSA1IDAgMS4xMjYtMC4zNzIgMi4xNjQtMSAzbC0yIDItNy03IDItMmMwLjgzNi0wLjYyOCAxLjg3NC0xIDMtMXpNMiAyM2wtMiA5IDktMiAxOC41LTE4LjUtNy03LTE4LjUgMTguNXpNMjIuMzYyIDExLjM2MmwtMTQgMTQtMS43MjQtMS43MjQgMTQtMTQgMS43MjQgMS43MjR6IiBmaWxsPSIjMDAwMDAwIj48L3BhdGg+PC9zdmc+Cg==) no-repeat center center;
 }
 .exit-icon {
@@ -67,10 +67,10 @@
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcidmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMzIgNi4wNzZjLTEuMTc3IDAuNTIyLTIuNDQzIDAuODc1LTMuNzcxIDEuMDM0IDEuMzU1LTAuODEzIDIuMzk2LTIuMDk5IDIuODg3LTMuNjMyLTEuMjY5IDAuNzUyLTIuNjc0IDEuMjk5LTQuMTY5IDEuNTkzLTEuMTk4LTEuMjc2LTIuOTA0LTIuMDczLTQuNzkyLTIuMDczLTMuNjI2IDAtNi41NjUgMi45MzktNi41NjUgNi41NjUgMCAwLjUxNSAwLjA1OCAxLjAxNiAwLjE3IDEuNDk2LTUuNDU2LTAuMjc0LTEwLjI5NC0yLjg4OC0xMy41MzItNi44Ni0wLjU2NSAwLjk3LTAuODg5IDIuMDk3LTAuODg5IDMuMzAxIDAgMi4yNzggMS4xNTkgNC4yODcgMi45MjEgNS40NjUtMS4wNzYtMC4wMzQtMi4wODgtMC4zMjktMi45NzQtMC44MjEtMC4wMDEgMC4wMjctMC4wMDEgMC4wNTUtMC4wMDEgMC4wODMgMCAzLjE4MSAyLjI2MyA1LjgzNCA1LjI2NiA2LjQzNy0wLjU1MSAwLjE1LTEuMTMxIDAuMjMtMS43MyAwLjIzLTAuNDIzIDAtMC44MzQtMC4wNDEtMS4yMzUtMC4xMTggMC44MzUgMi42MDggMy4yNiA0LjUwNiA2LjEzMyA0LjU1OS0yLjI0NyAxLjc2MS01LjA3OCAyLjgxLTguMTU0IDIuODEtMC41MyAwLTEuMDUyLTAuMDMxLTEuNTY2LTAuMDkyIDIuOTA1IDEuODYzIDYuMzU2IDIuOTUgMTAuMDY0IDIuOTUgMTIuMDc2IDAgMTguNjc5LTEwLjAwNCAxOC42NzktMTguNjggMC0wLjI4NS0wLjAwNi0wLjU2OC0wLjAxOS0wLjg0OSAxLjI4My0wLjkyNiAyLjM5Ni0yLjA4MiAzLjI3Ni0zLjM5OHoiIGZpbGw9IiMwMDAwMDAiPjwvcGF0aD48L3N2Zz4K) no-repeat center center;
 }
 
-@mixin icon-size($margin) {
+@mixin icon-size($margin, $width: 50px, $height: 50px) {
   margin : $margin;
-  width  : 50px;
-  height : 50px;
+  width  : $width;
+  height : $height;
   display: inline-block;
 }
 
@@ -78,11 +78,17 @@
   @include icon-size(10px);
 }
 
-.angularjs, .javascript, .html5, .symfony, .nodejs, .mongodb, .compass, .objective-c {
+.angularjs, .javascript, .symfony, .nodejs, .mongodb, .compass, .objective-c {
   @include icon-size(1px);
 }
 
-.html5 { width: 38px; }
+.add-icon, .exit-icon, .edit-icon, .remove-icon {
+  @include icon-size(1px, 20px, 20px);
+}
+
+.html5 {
+  @include icon-size(1px, 38px);
+}
 
 .tag-icon, .clock-icon, .bubbles-icon, .posts-icon {
   width: 1em;

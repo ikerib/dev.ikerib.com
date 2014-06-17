@@ -1,0 +1,44 @@
+@import "../helpers/flexbox";
+
+container {
+  div.dashboard-options {
+    @include display-flex();
+    margin-bottom: 2em;
+    .add-icon {
+      @include flex(1);
+    }
+  }
+  div.dashboard-wrapper {
+    text-align: center;
+    margin: 0 10%;
+    ul {
+      @include display-flex();
+      > li:nth-child(1) {
+        @include flex(4);
+      }
+      > li:nth-child(3) {
+        @include flex(4);
+      }
+      > li {
+        @include flex(1);
+        margin: 0.5em 0;
+      }
+    }
+    ul.wrapper-title {
+      border-bottom: 1px dotted;
+      > li {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    }
+    ul.wrapper-row {
+      > li:nth-child(1) {
+        text-align: initial;
+        border-left: 1px dotted;
+      }
+      > li {
+        border-right: 1px dotted;
+      }
+    }
+  }
+}

@@ -1,15 +1,10 @@
 include ./../includes/base
-head
-  link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
-  link(rel="stylesheet", href="/main.min.css")
-body
-  p
-  | Kaixo #{user.email}
-  a(href='/logout')
-    i.glyphicon.glyphicon-off
-  a(href='/artikuluak/berria')
-    i.glyphicon.glyphicon-plus
-  div.dashboard-table
+container
+  div.dashboard-wrapper
+    div.dashboard-options
+      span Kaixo #{user.email}
+      a.add-icon(href='/artikuluak/berria')
+      a.exit-icon(href='/logout')
     ul.wrapper-title
       li.item-title Titulua
       li.item-title Data
@@ -20,12 +15,13 @@ body
         li.item-row #{post.title}
         li.item-row #{moment(post.createdAt).format('L')}
         li.item-row-tag
-          each tag in post.tags
-            a(href="/posts/tag/#{tag.tag}") !{tag.tag} &nbsp;
+          each tag, i in post.tags
+            if i === post.tags.length-1
+              a(href='/posts/tag/#{tag.tag}') #{tag.tag}
+            else
+               a(href='/posts/tag/#{tag.tag}') #{tag.tag},&nbsp;
         li.item-row
-          a(href="/artikuluak/editatu/#{post.slug}")
-            i.glyphicon.glyphicon-edit &nbsp;
-          a(href="/delete-post/#{post.slug}")
-            i.glyphicon.glyphicon-trash
+          a.edit-icon(href='/artikuluak/editatu/#{post.slug}')
+          a.remove-icon(href='/delete-post/#{post.slug}')
 
 include ./../includes/foot
