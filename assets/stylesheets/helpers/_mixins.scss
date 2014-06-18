@@ -1,0 +1,21 @@
+@import "../helpers/variables";
+@import "../helpers/flexbox";
+
+@mixin input($width: 25em, $padding: 0 10px, $height: 2.5em, $font-size: 0.8em) {
+  border       : solid 1px $gray;
+  border-radius: 5px;
+  height       : $height;
+  width        : $width;
+  margin-bottom: 2em;
+  padding      : $padding;
+  font-size    : $font-size;
+}
+
+
+@mixin button($padding: 3% 20%) {
+  padding      : $padding;
+  cursor       : pointer;
+  border       : 1px solid $gray;
+  border-radius: 5px;
+  float        : right;
+}

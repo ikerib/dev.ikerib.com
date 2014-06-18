@@ -4,13 +4,13 @@ if (message.length > 0)
   div.alert #{message}
   
 .container
-  form(action='/login', method='post')
+  form.login(action='/login', method='post')
     div Posta elektronikoa
     input(type='text' name='email' placeholder='user@gmail.com' required)
     div Pasahitza
     input(type='password' name='password' placeholder='pasahitza' required)
     div
-      button(type='submit') Sartu
+      button.login(type='submit') Sartu
     div
       | Edota
       a(href='/')  hasierara

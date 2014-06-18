@@ -1,5 +1,6 @@
 @import "../helpers/variables";
 @import "../helpers/flexbox";
+@import "../helpers/mixins";
 
 div.alert {
   color        : $lightRed;
@@ -11,22 +12,12 @@ div.alert {
   @include display-flex();
   @include justify-content(center);
   align-content: center;
-  
-  input[type=text], input[type=password] {
-    border       : solid 1px $gray;
-    border-radius: 5px;
-    height       : 2.5em;
-    width        : 25em;
-    margin-bottom: 2em;
-    padding-left : 10px;
-    font-size    : 0.8em;
+  > form.login {
+    input[type=text], input[type=password] {
+      @include input();
+    }
   }
-
-  button[type=submit] {
-    padding      : 3% 20%;
-    cursor       : pointer;
-    border       : 1px solid $gray;
-    border-radius: 5px;
-    float        : right;
+  button.login[type=submit] {
+    @include button();
   }
 }

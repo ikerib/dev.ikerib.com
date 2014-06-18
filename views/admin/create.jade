@@ -1,16 +1,14 @@
 include ./../includes/base
 
-form(action=post ? '/update-post/#{post.slug}': '/create-post', method='post')
-  .form-group
-    label Titulua
-    input.form-control(type='text', name='title', value=post ? post.title: '')
-  .form-group
-    label Edukia
+.container
+  form.create-edit(action=post ? '/update-post/#{post.slug}': '/create-post', method='post')
+    div Titulua
+    input(type='text', name='title', value=post ? post.title: '')
+    div Edukia
     textarea(name='body')
       if post
         | #{post.body}
-  .form-group
-    label Etiketak
+    div Etiketak
     textarea(name='tag')
       if post
         each tag, i in post.tags
@@ -18,5 +16,5 @@ form(action=post ? '/update-post/#{post.slug}': '/create-post', method='post')
             | #{tag.tag}
           else
             | #{tag.tag},&nbsp;
-  button(type='submit') Gehitu
+    button.create-edit(type='submit') Gehitu
 include ./../includes/foot
