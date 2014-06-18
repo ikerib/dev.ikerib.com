@@ -2,7 +2,7 @@
 @import "../helpers/flexbox";
 @import "../helpers/mixins";
 
-.container {
+.create-edit-container {
   max-width: 1000px;
   margin-bottom: 10%;
   @include display-flex();
@@ -16,11 +16,17 @@
     textarea:nth-child(4) {
       height: 500px;
     }
+    textarea:nth-child(6) {
+      margin-bottom: 0;
+    }
     textarea {
       resize: vertical;
     }
-  }
-  button.create-edit[type=submit] {
-    @include button(1% 5%);
+    .all-tags {
+      font-size: 0.7em;
+    }
+    button.create-edit[type=submit] {
+      @include button(5% 0, 1% 5%);
+    }
   }
 }

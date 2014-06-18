@@ -1,6 +1,6 @@
 include ./../includes/base
 
-.container
+.create-edit-container
   form.create-edit(action=post ? '/update-post/#{post.slug}': '/create-post', method='post')
     div Titulua
     input(type='text', name='title', value=post ? post.title: '')
@@ -16,5 +16,12 @@ include ./../includes/base
             | #{tag.tag}
           else
             | #{tag.tag},&nbsp;
+    div.all-tags
+      each tag, i in tags
+        if i === tags.length-1
+          | #{tag}
+        else
+          | #{tag},&nbsp;
     button.create-edit(type='submit') Gehitu
+
 include ./../includes/foot

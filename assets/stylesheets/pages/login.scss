@@ -18,6 +18,6 @@ div.alert {
     }
   }
   button.login[type=submit] {
-    @include button();
+    @include button(0 10% 0 0);
   }
 }

@@ -11,11 +11,10 @@
   font-size    : $font-size;
 }
 
-
-@mixin button($padding: 3% 20%) {
+@mixin button($margin: 0, $padding: 3% 20%) {
   padding      : $padding;
   cursor       : pointer;
   border       : 1px solid $gray;
   border-radius: 5px;
-  float        : right;
+  margin       : $margin;
 }

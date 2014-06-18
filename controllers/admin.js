@@ -2,7 +2,8 @@
 
 var mongoose = require("mongoose"),
     _        = require("lodash"),
-    Post     = mongoose.model("Post");
+    Post     = mongoose.model("Post"),
+    Utils    = require('../utils/utilities');
 
 var _addTags = function (tags, post) {
   var _tags = tags.split(/[ ,]+/);
@@ -17,11 +18,15 @@ var _addTags = function (tags, post) {
 };
 
 exports.manage = function (req, res) {
+  var tags;
+  
   if (!req.params) {
     res.render('admin/create');
   }
   
-  res.render('admin/create', { post: req.post });
+  tags = Utils.extractTags(req.posts);
+  
+  res.render('admin/create', { post: req.post, tags: tags });
 };
 
 exports.create = function (req, res) {

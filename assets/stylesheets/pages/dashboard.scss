@@ -1,4 +1,5 @@
 @import "../helpers/flexbox";
+@import "../helpers/mq";
 
 container {
   div.dashboard-options {
@@ -38,6 +39,28 @@ container {
       }
       > li {
         border-right: 1px dotted;
+      }
+    }
+  }
+}
+
+
+@include mq($from: mobile, $to: tablet) {
+  container {
+    div.dashboard-wrapper {
+      ul {
+        display: inherit;
+      }
+      ul.wrapper-title {
+        display: none;
+      }
+      ul.wrapper-row {
+        border-bottom: 1px dotted;
+        margin-top:2em; 
+        > li:nth-child(1), > li {
+          text-align: center;
+          border: 0;
+        }
       }
     }
   }
