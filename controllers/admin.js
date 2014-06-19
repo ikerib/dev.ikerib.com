@@ -1,8 +1,8 @@
 'use strict';
 
-var mongoose = require("mongoose"),
-    _        = require("lodash"),
-    Post     = mongoose.model("Post"),
+var mongoose = require('mongoose'),
+    _        = require('lodash'),
+    Post     = mongoose.model('Post'),
     Utils    = require('../utils/utilities');
 
 var _addTags = function (tags, post) {
@@ -20,13 +20,34 @@ var _addTags = function (tags, post) {
 exports.manage = function (req, res) {
   var tags;
   
-  if (!req.params) {
+  if (!req.post) {
+    console.log('entra');
     res.render('admin/create');
   }
-  
+
   tags = Utils.extractTags(req.posts);
   
   res.render('admin/create', { post: req.post, tags: tags });
+};
+
+exports.manage = function (req, res) {
+  var tags;
+    
+  if (!req.post) {
+    Post.find({}, function (err, posts) {
+      if (err) {
+        return res.send(500, err);
+      }
+      tags = Utils.extractTags(posts);
+      
+      res.render('admin/create', { tags: tags });
+    });
+  }
+  else {
+    tags = Utils.extractTags(req.posts);
+    
+    res.render('admin/create', { post: req.post, tags: tags });
+  }
 };
 
 exports.create = function (req, res) {
