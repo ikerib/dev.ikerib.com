@@ -1,13 +1,15 @@
-blog.benatespina
+[blog.benatespina](http://blog.benatespina.com)
 ================
 ##Nire programazio kontuen txokoa
 
 > My personal blog where I am talking about development in basque.
 
 ##Getting Started
-If you want to test in your localhost, you must have installed ***NodeJS***, ***MongoDB*** and alternatively ***GruntJS***.
+If you want to test in your localhost, you must have installed ***NodeJS***, ***MongoDB***, ***Sass*** with ***Compass*** and alternatively ***GruntJS***.
 
 If you have not installed [Node.js](http://nodejs.org/) before, be sure to check out this [link](https://github.com/joyent/node/wiki/Installation); it explains how to install a [Node.js](http://nodejs.org/) in a different platforms.
+
+This project works with [Sass](http://sass-lang.com/) preprocessor and [Compass](http://compass-style.org/) framework to compile CSS. Before install, you have to install [RubyGems](https://rubygems.org/pages/download).
 
 Also, to install [MongoDB](http://www.mongodb.org/) you can follow this [link](http://docs.mongodb.org/manual/installation/); it is the explanation for installing on all the environments.
 
