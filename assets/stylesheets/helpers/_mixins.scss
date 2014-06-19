@@ -9,6 +9,7 @@
   margin-bottom: 2em;
   padding      : $padding;
   font-size    : $font-size;
+  line-height  : 2em; 
 }
 
 @mixin button($margin: 0, $padding: 3% 20%) {
