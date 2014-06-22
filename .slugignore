@@ -1,0 +1,8 @@
+/.gitignore
+/.jshintrc
+/assets
+/config/env/development.js
+/fixtures
+/gruntfile.js
+/LICENSE.md
+/README.md
