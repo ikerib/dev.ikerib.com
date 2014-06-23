@@ -19,19 +19,6 @@ var _addTags = function (tags, post) {
 
 exports.manage = function (req, res) {
   var tags;
-  
-  if (!req.post) {
-    console.log('entra');
-    res.render('admin/create');
-  }
-
-  tags = Utils.extractTags(req.posts);
-  
-  res.render('admin/create', { post: req.post, tags: tags });
-};
-
-exports.manage = function (req, res) {
-  var tags;
     
   if (!req.post) {
     Post.find({}, function (err, posts) {

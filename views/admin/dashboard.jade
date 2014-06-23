@@ -17,9 +17,9 @@ container
         li.item-row-tag
           each tag, i in post.tags
             if i === post.tags.length-1
-              a(href='/posts/tag/#{tag.tag}') #{tag.tag}
+              a(href='/artikuluak/etiketak/#{tag.tag}') #{tag.tag}
             else
-               a(href='/posts/tag/#{tag.tag}') #{tag.tag},&nbsp;
+               a(href='/artikuluak/etiketak/#{tag.tag}') #{tag.tag},&nbsp;
         li.item-row
           a.edit-icon(href='/artikuluak/editatu/#{post.slug}')
           a.remove-icon(href='/delete-post/#{post.slug}')

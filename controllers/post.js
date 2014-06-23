@@ -107,7 +107,7 @@ exports.feed = function (req, res) {
     for (i = 0, length = posts.length; i < length; i++) {
       feed.addItem({
         title      : posts[i].title,
-        link       : 'http://blog.benatespina.com/' + posts[i].slug,
+        link       : 'http://blog.benatespina.com/artikuluak/' + posts[i].slug,
         description: posts[i].body,
         date       : posts[i].createdAt
       });

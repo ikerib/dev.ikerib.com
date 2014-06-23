@@ -6,8 +6,6 @@ var Post  = require('./controllers/post'),
 
 module.exports = function (app, passport) {
   app.get('/', Post.all);
-  app.get('/posts/:postSlug', Post.show);
-  app.get('/posts/tag/:tag', Post.tag);
   
   app.get('/feed', Post.feed);
   
@@ -31,6 +29,9 @@ module.exports = function (app, passport) {
   
   app.get('/delete-post/:postSlug', User.isLoggedIn, Admin.delete);
   
+  
+  app.get('/artikuluak/:postSlug', Post.show);
+  app.get('/artikuluak/etiketak/:tag', Post.tag);
   
   app.param('postSlug', Post.post);
   app.param('postSlug', Post.posts);

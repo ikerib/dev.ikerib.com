@@ -28,7 +28,7 @@ div.tags-aside
     div.tag-wrapper
       each tag in tags
         div.tag
-          a(href="/posts/tag/#{tag}") !{tag}
+          a(href="/artikuluak/etiketak/#{tag}") !{tag}
 div.posts-aside
   h3
     span.posts-icon
@@ -38,4 +38,4 @@ div.posts-aside
       each post in posts
         div.createdAt #{moment(post.createdAt).format('L')}
         div.post
-          a(href="/posts/#{post.slug}") #{post.title}
+          a(href="/artikuluak/#{post.slug}") #{post.title}
