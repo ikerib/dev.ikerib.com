@@ -9,7 +9,8 @@ var express      = require('express'),
     fs           = require('fs'),
     moment       = require('moment'),
     passport     = require('passport'),
-    flash        = require('connect-flash');
+    flash        = require('connect-flash'),
+    http         = require('http');
 
 var config = require('./config/config'),
     db     = mongoose.connect(config.db),
@@ -53,3 +54,8 @@ var routes = require('./routes')(app, passport);
 var port = process.env.PORT || config.port;
 app.listen(port);
 console.log("My blog started on port " + port);
+setInterval(function() {
+  return http.get('blogbenatespina.herokuapp.com', function () {
+    return console.log("Heroku, you cannot sleep!");
+  });
+}, 3300000);
