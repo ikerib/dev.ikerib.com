@@ -20,7 +20,10 @@ var config = require('./config/config'),
 require('./config/passport')(passport);
 
 app.use(cookieParser());
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 
 app.set('view engine', 'jade');
 app.set('views', './views');
@@ -32,14 +35,16 @@ app.use(session({
   store: new mongoStore({
     db: db.connection.db,
     collection: config.sessionCollection
-  })
+  }),
+  resave: true,
+  saveUninitialized: true
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-moment.lang('eu');
+moment.locale('eu');
 app.locals.moment = moment;
 
 if (process.env.NODE_ENV === 'development') {
