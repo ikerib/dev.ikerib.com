@@ -11,7 +11,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     meta: {
-      file: 'benatespina-blog',
+      file: 'ikerdev-blog',
       banner: '/* <%= meta.file %> v<%= pkg.version %> - '                    +
               '<%= grunt.template.today("yyyy/m/d") %>\n'                     +
               '<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>'    +
