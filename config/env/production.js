@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db    : os.getenv('MONGOHQ_URL'),
+  db    : process.env.('MONGOHQ_URL'),
   secret: 'mysessionsecretkey',
   app   : {
     name: 'ikerdevbloga'
