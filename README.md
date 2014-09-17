@@ -1,4 +1,4 @@
-[blog.benatespina](http://blog.benatespina.com)
+[ikerdev bloga](http://dev.ikerib.com)
 ================
 ##Nire programazio kontuen txokoa
 

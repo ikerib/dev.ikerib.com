@@ -4,7 +4,7 @@ var path     = require('path'),
     rootPath = path.normalize(__dirname + '/../..');
 
 module.exports = {
-  sessionSecret: 'blogbenatespina',
+  sessionSecret: 'ikerdevbloga',
   sessionCollection: 'sessions',
   root: rootPath,
   port: process.env.PORT || 3000,

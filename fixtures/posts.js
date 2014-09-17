@@ -130,4 +130,20 @@ exports.Post = [
       { tag: "gruntjs" }
     ]
   },
+  {
+    title: "Linux sistema eguneratu eta garbitzeko script bat",
+    body: "<p>Script bat erabil dezakegu gure Debian/Ubuntu sistema eguneratu " +
+    "eta garbitzeko terminalaren zain egon gabe, agindu baten bitartez soilik." +
+    "</p><p>Instalatzeko gehitu ondoko kodea zure .bashrc fitxategiari (.zshrc" +
+    "fitxategia zsh erabiltzen baduzu):</p>" +
+    "<p><script src='https://gist.github.com/ikerib/391a0be5a1f99247b133.js'></script></p>"+
+    "<p>Script-ak ondoko gauzak ditu beharrezko:</p><p><span class='bold'> " +
+    "localepurge </span>: sobran diren hizkuntzen fitxategiak ezabatzeko.</p>" +
+    "<p><span class='bold'> deborphan </span>: sisteman sobera diren fitxategiak " +
+    "aurkitu eta ezabatuko ditu </p><p>Ikusten den bezala, azken lerroan " +
+    "<span class='italic'>apt-get moo</span> egiten da, dena ondo joan bada, " +
+    "behi bat erakutsiz ;)</p><p>Script-ari deitzeko egin <span class='italic'>eguneratu</span> " +
+    "idatzi zure terminalean",
+    tags: [{ tag: "linux"}]
+  },
 ];

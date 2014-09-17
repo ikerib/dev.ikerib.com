@@ -87,14 +87,14 @@ exports.feed = function (req, res) {
   var feed, i, j, length;
   
   feed = new Feed({
-    title      : 'blog.benatespina',
-    description: 'My personal blog where I talk about development in basque',
+    title      : 'ikerdev',
+    description: 'Nire programazio kontuen txokoa',
     link       : 'http://blog.benatespina.com/',
-    copyright  : 'All rights reserved 2014, @benatespina',
+    copyright  : 'All rights reserved 2014, @ikerib',
     author     : {
-      name : 'Beñat Espiña',
-      email: 'benatespina@gmail.com',
-      link : 'http://benatespina.com'
+      name : 'Iker Ibarguren',
+      email: 'ikerib@gmail.com',
+      link : 'http://ikerib.github.com'
     }
   });
   
