@@ -1,6 +1,6 @@
 # project
 public/*
-config/env/produccion.js
+#config/env/produccion.js
 
 # Node.js
 lib-cov
