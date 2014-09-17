@@ -7,4 +7,3 @@ module.exports = {
     name: 'ikerdevbloga'
   }
 };
-heroku config:set MONGOHQ_URL="mongodb://ikerdev:berahero8>@kahana.mongohq.com:10021/ikerdev"
