@@ -58,9 +58,9 @@ var routes = require('./routes')(app, passport);
 
 var port = process.env.PORT || config.port;
 app.listen(port);
-console.log("My blog started on port " + port);
+console.log("Bloga martxan jarri da hurrengo portuan: " + port);
 setInterval(function() {
-  return http.get('blogbenatespina.herokuapp.com', function () {
+  return http.get('ikerdev.herokuapp.com', function () {
     return console.log("Heroku, you cannot sleep!");
   });
 }, 3300000);

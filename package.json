@@ -1,16 +1,16 @@
 {
-  "name": "blog.benatespina",
+  "name": "ikerdev",
   "description": "my personal blog about programming in basque language",
   "version": "1.0.0",
-  "author": "benatespina - benatespina@gmail.com",
+  "author": "ikerib - ikerib@gmail.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benatespina/blog.benatespina"
+    "url": "https://github.com/ikerib/ikerdev"
   },
   "license": [
     {
       "type": "MIT",
-      "url": "https://github.com/benatespina/blog.benatespina/blob/master/LICENSE.md"
+      "url": "https://github.com/ikerib/ikerdev/blob/master/LICENSE.md"
     }
   ],
   "engines": {

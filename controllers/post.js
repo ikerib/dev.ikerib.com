@@ -89,7 +89,7 @@ exports.feed = function (req, res) {
   feed = new Feed({
     title      : 'ikerdev',
     description: 'Nire programazio kontuen txokoa',
-    link       : 'http://blog.benatespina.com/',
+    link       : 'http://dev.ikerib.com/',
     copyright  : 'All rights reserved 2014, @ikerib',
     author     : {
       name : 'Iker Ibarguren',
@@ -107,7 +107,7 @@ exports.feed = function (req, res) {
     for (i = 0, length = posts.length; i < length; i++) {
       feed.addItem({
         title      : posts[i].title,
-        link       : 'http://blog.benatespina.com/artikuluak/' + posts[i].slug,
+        link       : 'http://dev.ikerib.com/artikuluak/' + posts[i].slug,
         description: posts[i].body,
         date       : posts[i].createdAt
       });

@@ -1,7 +1,7 @@
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2014 benatespina - [benatespina@gmail.com](mailto:benatespina@gmail.com)
+Copyright (c) 2014 ikerib - [ikerib@gmail.com](mailto:ikerib@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

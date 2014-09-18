@@ -17,7 +17,7 @@ Finally, if you have not used [Grunt](http://gruntjs.com/) before, be sure to ch
 
 Then, you have to type the following commands:
 
-    $ git clone https://github.com/benatespina/blog.benatespina.git blog
+    $ git clone https://github.com/ikerib/ikerdev.git blog
     $ cd blog
     $ npm install
     $ grunt
@@ -32,8 +32,8 @@ This blog contains some fixtures such as four articles and the user admin for a 
     password (pasahitza)       : 123456
 
 ## Credits
-Created by **benatespina** - [benatespina@gmail.com](mailto:benatespina@gmail.com).
+Created by **ikerib** - [ikerib@gmail.com](mailto:ikerib@gmail.com).
 Copyright (c) 2014
 
 ## Licensing Options
-Released under MIT license. See [LICENSE.md](https://github.com/benatespina/blog.benatespina/blob/master/LICENSE.md) file for more information.
+Released under MIT license. See [LICENSE.md](https://github.com/ikerib/ikerdev/blob/master/LICENSE.md) file for more information.
