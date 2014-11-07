@@ -1,5 +1,6 @@
 .post
-  h1 #{post.title}
+  h1.title
+    a.title(href="/artikuluak/#{post.slug}") #{post.title}
   div.createdAt
     span.clock-icon
     &nbsp;

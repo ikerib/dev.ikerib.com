@@ -149,7 +149,7 @@ ul.main_nav li a:hover{
   font-size: 28px;
   text-transform: uppercase;
   line-height: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .main .title a,
@@ -231,12 +231,6 @@ ul.main_nav li a:hover{
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 80px;
-}
-
-.post h1 {
-  font: {
-    size  : 30px;
-  }
 }
 
 /*  Sidebar & widgets  */
@@ -511,6 +505,7 @@ footer ul.social_profiles .d a:hover{
   width: 978px;
   height: auto;
   margin: 0 auto;
+  min-height:1200px;
 }
 
 ul.main_nav li a,
