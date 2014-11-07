@@ -1,12 +1,12 @@
 include includes/base
-container
-  div.wrapper
-    article
-      each post in posts
+section.main2.wrapper
+  section.content
+    each post in posts
+      article
         include ./templates/post
-    aside
-      include ./templates/aside
-  footer
-    include ./templates/footer
+  aside.sidebar
+    include ./templates/aside
+footer
+  include ./templates/footer
 
 include ./includes/foot

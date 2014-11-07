@@ -1,15 +1,19 @@
-h2 #{post.title}
-div.createdAt
-  span.clock-icon
-  &nbsp;
-  span #{moment(post.createdAt).format('LLLL')}
-  if post.updatedAt
-    span #{moment(post.updatedAt).calendar()} editatua.
-div.post-body !{post.body}...
-  a(href="/artikuluak/#{post.slug}") (irakurtzen jarraitu)
-div.tags-wrapper
-  h3
-    span.tag-icon
-    each tag in post.tags
-      span.tag
-        a(href="/artikuluak/etiketak/#{tag.tag}") !{tag.tag}
+.post
+  h1 #{post.title}
+  div.createdAt
+    span.clock-icon
+    &nbsp;
+    span #{moment(post.createdAt).format('LLLL')}
+    if post.updatedAt
+      span #{moment(post.updatedAt).calendar()} editatua.
+  div.post-body !{post.body}
+    br
+    a.read_more(href="/artikuluak/#{post.slug}")
+      | Jarraitu Irakurtzen
+      i.read_more_arrow
+  div.tags-wrapper
+    h3
+      span.tag-icon
+      each tag in post.tags
+        span.tag
+          a(href="/artikuluak/etiketak/#{tag.tag}") !{tag.tag}

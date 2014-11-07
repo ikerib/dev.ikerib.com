@@ -1,0 +1,94 @@
+/* line 5, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-options {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 2em;
+}
+/* line 8, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-options .add-icon {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+/* line 12, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper {
+  text-align: center;
+  margin: 0 10%;
+}
+/* line 15, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 17, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul > li:nth-child(1) {
+  -webkit-box-flex: 4;
+  -moz-box-flex: 4;
+  -ms-flex: 4;
+  -webkit-flex: 4;
+  flex: 4;
+}
+/* line 20, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul > li:nth-child(3) {
+  -webkit-box-flex: 4;
+  -moz-box-flex: 4;
+  -ms-flex: 4;
+  -webkit-flex: 4;
+  flex: 4;
+}
+/* line 23, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul > li {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 0.5em 0;
+}
+/* line 28, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul.wrapper-title {
+  border-bottom: 1px dotted;
+}
+/* line 30, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul.wrapper-title > li {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 36, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul.wrapper-row > li:nth-child(1) {
+  text-align: initial;
+  border-left: 1px dotted;
+}
+/* line 40, ../../../assets/stylesheets/pages/dashboard.scss */
+container div.dashboard-wrapper ul.wrapper-row > li {
+  border-right: 1px dotted;
+}
+
+@media all and (min-width: 20em) and (max-width: 46.24em) {
+  /* line 51, ../../../assets/stylesheets/pages/dashboard.scss */
+  container div.dashboard-wrapper ul {
+    display: inherit;
+  }
+  /* line 54, ../../../assets/stylesheets/pages/dashboard.scss */
+  container div.dashboard-wrapper ul.wrapper-title {
+    display: none;
+  }
+  /* line 57, ../../../assets/stylesheets/pages/dashboard.scss */
+  container div.dashboard-wrapper ul.wrapper-row {
+    border-bottom: 1px dotted;
+    margin-top: 2em;
+  }
+  /* line 60, ../../../assets/stylesheets/pages/dashboard.scss */
+  container div.dashboard-wrapper ul.wrapper-row > li:nth-child(1), container div.dashboard-wrapper ul.wrapper-row > li {
+    text-align: center;
+    border: 0;
+  }
+}

@@ -85,7 +85,7 @@ exports.tag = function(req, res) {
 
 exports.feed = function (req, res) {
   var feed, i, j, length;
-  
+
   feed = new Feed({
     title      : 'ikerdev',
     description: 'Nire programazio kontuen txokoa',
@@ -97,7 +97,7 @@ exports.feed = function (req, res) {
       link : 'http://ikerib.github.com'
     }
   });
-  
+
   Post.find().sort('-created').exec(function (err, posts) {
     if (err) {
       res.render(err, {
@@ -112,7 +112,7 @@ exports.feed = function (req, res) {
         date       : posts[i].createdAt
       });
     }
-    
+
     res.set('Content-Type', 'text/xml');
     res.send(feed.render('atom-1.0'));
   });
