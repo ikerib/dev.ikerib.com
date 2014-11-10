@@ -5,6 +5,16 @@ header{
   border-bottom: 4px #1e1e1e solid;
 }
 
+header .logo {
+  color: #CCCCCC;
+  display: block;
+  float: left;
+  font-family: 'LatoBold', 'Helvetica', arial;
+  font-size: 30px;
+  margin-top: 49px;
+  margin-left: 40px;
+}
+
 header img.h_logo{
   display: block;
   float: left;
@@ -401,6 +411,13 @@ aside .bidaiak {
   background-position: -16px 0;
 }
 
+.div-social-bar {
+  margin: 20px 0px 20px 0px;
+}
+
+.comments-container {
+  margin: 20px 0px;
+}
 
 /*  footer  */
 footer{

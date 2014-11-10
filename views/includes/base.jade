@@ -1,6 +1,6 @@
 html(lang='eu')
 head
-    title ikerdev
+    title {{ ikerdev }}
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     meta(name="viewport", content="width=device-width,initial-scale=1")
@@ -22,15 +22,11 @@ head
   body
     header
       .wrapper
-        a(href='#')
-          img.h_logo(src='img/logo.png', alt='Blogin', title='')
+        a.logo(href='#')
+          {{ ikerdev }}
         nav
           ul.main_nav
             li.current
-              a(href='#') Journal
+              a(href='http://www.ikerib.com') Bidaiak
             li
-              a(href='#') About
-            li
-              a(href='#') Work
-            li
-              a(href='#') Contact
+              a(href='#') Kontaktua
