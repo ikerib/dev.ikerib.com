@@ -68,6 +68,17 @@ module.exports = function(grunt) {
             filter: 'isFile'
           }
         ]
+      },
+      fonts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'assets/fonts',
+            src: '**/*',
+            dest: 'public/fonts',
+            filter: 'isFile'
+          }
+        ]
       }
     },
     nodemon: {

@@ -1,4 +1,4 @@
-div.about-me
+section.about-me
   div.my-photo
     img(alt="photo", src="/img/photo-200x200.png")
   div.about-resume
@@ -7,12 +7,12 @@ div.about-me
       | Mahaigain, Web eta mugikorrerako aplikazio garatzailea.
     p
       | Progranazio mundu honetan nire eguneroko esperientziei buruzko artikuluak aurkituko
-      | dituzu hemen. 
+      | dituzu hemen.
     p
       div
         |Curriculum Vitae
-      a(href="http://ikerib.github.io/cv/curriculum-eus.pdf", target="_blank") Euskeraz -
-      a(href="http://ikerib.github.io/cv/curriculum-eus.pdf", target="_blank")  Erdaraz
+      a(href="http://ikerib.github.io/cv/curriculum-eus.pdf", target="_blank") CV Euskeraz
+      a(href="http://ikerib.github.io/cv/curriculum-eus.pdf", target="_blank") CV Erdaraz
     | Jorratzen ditudan gaien artean:
   div.technologies
     span.html5
@@ -23,27 +23,18 @@ div.about-me
     span.mongodb
     span.compass
     span.objective-c
+  div.bidaiak
     p
       | Nire bidaiei buruz zerbait gehiago jakin nahi izatekotan beste
       a(href="http://ikerib.com", target="_blank")  webgune
       |  honetan aurkitu dezakezu.
 
-div.tags-aside
-  h3
-    span.tag-icon
-    span Etiketak
-  div.tags-wrapper
-    div.tag-wrapper
-      each tag in tags
-        div.tag
-          a(href="/artikuluak/etiketak/#{tag}") !{tag}
-div.posts-aside
-  h3
-    span.posts-icon
-    span Aurreko ekarpenak
-  div.posts-wrapper
-    div.post-wrapper
-      each post in posts
-        div.createdAt #{moment(post.createdAt).format('L')}
-        div.post
-          a(href="/artikuluak/#{post.slug}") #{post.title}
+  div.tags-aside
+    h3
+      span.tag-icon
+      span Etiketak
+    div.tags-wrapper
+      div.tag-wrapper
+        each tag in tags
+          div.tag
+            a(href="/artikuluak/etiketak/#{tag}") !{tag}

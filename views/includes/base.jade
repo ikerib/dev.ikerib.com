@@ -1,12 +1,10 @@
-doctype html
-html(lang="eu")
-  head
+html(lang='eu')
+head
+    title {{ ikerdev }}
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(http-equiv="Content-type", content="text/html;charset=UTF-8")
-
-    title ikerdev
 
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Gafata")
 
@@ -21,8 +19,12 @@ html(lang="eu")
     script(src='http://w.sharethis.com/button/buttons.js')
     script.
       stLight.options({ publisher: '84137f2a26d08ad79f0b6c88ed9dcfe7' });
-
   body
     header
-      h1
-        a(href='/') ikerib + dev = ikerdev
+      .wrapper
+        a.logo(href='/')
+          {{ ikerdev }}
+        nav
+          ul.main_nav
+            li.current
+              a(href='http://www.ikerib.com') Bidaiak
