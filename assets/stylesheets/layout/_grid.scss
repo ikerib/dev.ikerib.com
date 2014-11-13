@@ -1,72 +1,111 @@
-header {
-  height       : auto;
-  padding      : 2em;
-  margin-bottom: 3%;
-}
-container {
-  max-width: 1300px;
-  .wrapper {
-    margin: 0 10%;
-    @include display-flex();
-    @include justify-content(center);
-    align-content: center;
-    article, aside, footer { 
-      margin-bottom: 1em;
-    }
-    article { 
-      @include flex(4);
-      margin-right: 2.5%;
-      div.post-options-container {
-        @include display-flex();
-        > h3 {
-          @include flex(1);
-        }
-      }
-    }
-    aside {
-      @include flex(1);
-      margin-left: 2.5%;
-      div.dashboard-table {
-        ul.wrapper-title, ul.wrapper-row {
-          @include display-flex();
-          justify-content: center;
-          > li.item-title, li.item-row {
-            @include flex(1 10%);
-          }
-          > li.item-title-tag, li.item-row-tag {
-            @include flex(2);
-          }
-        }
-      }
-    }
-  }
-  footer {
-    > .my-social-container {
-      padding-top: 3em;
-      background: linear-gradient($white, $lightGray)
-    }
-  }
-}
+// header {
+//   height       : auto;
+//   padding      : 2em;
+//   margin-bottom: 3%;
+// }
+// container {
+//   max-width: 1300px;
+//   .wrapper {
+//     margin: 0 10%;
+//     @include display-flex();
+//     @include justify-content(center);
+//     align-content: center;
+//     article, aside, footer {
+//       margin-bottom: 1em;
+//     }
+//     article {
+//       @include flex(4);
+//       margin-right: 2.5%;
+//       div.post-options-container {
+//         @include display-flex();
+//         > h3 {
+//           @include flex(1);
+//         }
+//       }
+//     }
+//     aside {
+//       @include flex(1);
+//       margin-left: 2.5%;
+//       div.dashboard-table {
+//         ul.wrapper-title, ul.wrapper-row {
+//           @include display-flex();
+//           justify-content: center;
+//           > li.item-title, li.item-row {
+//             @include flex(1 10%);
+//           }
+//           > li.item-title-tag, li.item-row-tag {
+//             @include flex(2);
+//           }
+//         }
+//       }
+//     }
+//   }
+//   footer {
+//     > .my-social-container {
+//       padding-top: 3em;
+//       background: linear-gradient($white, $lightGray)
+//     }
+//   }
+// }
 
 
 @include mq($from: mobile, $to: desktop) {
-  container {
-    .wrapper {
-      display: inherit;
-      > aside {
-        @include display-flex();
-        @include flex-wrap(wrap);
-        > div.about-me > div.my-photo > img {
-          width: inherit;
-        }
-        .tags-aside, .posts-aside {
-          @include flex(1);
-        }
-      }
-      > aside, > article {
-        margin: 5%;
-      }
+  body {
+    font-size: 1em;
+    h1, h2, h3 {
+      font-size: 1em;
     }
+    nav {
+      display: none;
+    }
+    .wrapper {
+      .main2 .content {
+          width: inherit;
+      }
+      width:inherit;
+      section {
+        width:inherit;
+        article {
+          > h2 {
+            font-family: sans-serif;
+            text-align: center;
+          }
+          div.post {
+            width:inherit;
+          }
+          div.post-options-container {
+            display: inherit;
+          }
+        }
+        aside {
+          > div.about-me > div.my-photo > img {
+            width: 35%;
+          }
+        }
+      }
+      section.content {
+          width: inherit;
+          float:none;
+        }
+    }
+  }
+  .main2 {
+    padding-top: 0px;
+  }
+  .main .post h1.title, .main2 .post h1.title {
+    font-size: 1em;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .post .createdAt, .writtenAt {
+    font-size: 11px;
+  }
+  aside {
+    float:none;
+    width:inherit;
+  }
+  .about-me .my-photo > img {
+    width: inherit;
   }
 }
 
@@ -76,21 +115,57 @@ container {
     h1, h2, h3 {
       font-size: 1em;
     }
-    .wrapper {
-      article {
-        > h2 {
-          font-family: sans-serif;
-          text-align: center;
-        }
-        div.post-options-container {
-          display: inherit;
-        }
-      }
-      aside {
-        > div.about-me > div.my-photo > img {
-          width: 35%;
-        }
-      }
+    nav {
+      display: none;
     }
+    .wrapper {
+      .main2 .content {
+          width: inherit;
+      }
+      width:inherit;
+      section {
+        width:inherit;
+        article {
+          > h2 {
+            font-family: sans-serif;
+            text-align: center;
+          }
+          div.post {
+            width:inherit;
+          }
+          div.post-options-container {
+            display: inherit;
+          }
+        }
+        aside {
+          width:inherit;
+          > div.about-me > div.my-photo > img {
+            width: 35%;
+          }
+        }
+      }
+      section.content {
+          width: inherit;
+          float:none;
+        }
+    }
+  }
+  .main2 {
+    padding-top: 0px;
+  }
+  .main .post h1.title, .main2 .post h1.title {
+    font-size: 1em;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .post .createdAt, .writtenAt {
+    font-size: 11px;
+  }
+  aside {
+    float:none;
+    width:100% !important;
+  }
+  .about-me .my-photo > img {
+    width:inherit;
   }
 }

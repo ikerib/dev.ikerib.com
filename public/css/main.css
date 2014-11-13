@@ -1058,3 +1058,160 @@ footer ul.social_profiles li a,
 .clock-icon {
   width: 0.7em;
 }
+
+@media all and (min-width: 20em) and (max-width: 61.24em) {
+  /* line 53, ../../assets/stylesheets/layout/_grid.scss */
+  body {
+    font-size: 1em;
+  }
+  /* line 55, ../../assets/stylesheets/layout/_grid.scss */
+  body h1, body h2, body h3 {
+    font-size: 1em;
+  }
+  /* line 58, ../../assets/stylesheets/layout/_grid.scss */
+  body nav {
+    display: none;
+  }
+  /* line 61, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper {
+    width: inherit;
+  }
+  /* line 62, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper .main2 .content {
+    width: inherit;
+  }
+  /* line 66, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section {
+    width: inherit;
+  }
+  /* line 69, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section article > h2 {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  /* line 73, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section article div.post {
+    width: inherit;
+  }
+  /* line 76, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section article div.post-options-container {
+    display: inherit;
+  }
+  /* line 81, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section aside > div.about-me > div.my-photo > img {
+    width: 35%;
+  }
+  /* line 86, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section.content {
+    width: inherit;
+    float: none;
+  }
+
+  /* line 92, ../../assets/stylesheets/layout/_grid.scss */
+  .main2 {
+    padding-top: 0px;
+  }
+
+  /* line 95, ../../assets/stylesheets/layout/_grid.scss */
+  .main .post h1.title, .main2 .post h1.title {
+    font-size: 1em;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  /* line 100, ../../assets/stylesheets/layout/_grid.scss */
+  .post .createdAt, .writtenAt {
+    font-size: 11px;
+  }
+
+  /* line 103, ../../assets/stylesheets/layout/_grid.scss */
+  aside {
+    float: none;
+    width: inherit;
+  }
+
+  /* line 107, ../../assets/stylesheets/layout/_grid.scss */
+  .about-me .my-photo > img {
+    width: inherit;
+  }
+}
+@media all and (max-width: 46.24em) {
+  /* line 113, ../../assets/stylesheets/layout/_grid.scss */
+  body {
+    font-size: 1em;
+  }
+  /* line 115, ../../assets/stylesheets/layout/_grid.scss */
+  body h1, body h2, body h3 {
+    font-size: 1em;
+  }
+  /* line 118, ../../assets/stylesheets/layout/_grid.scss */
+  body nav {
+    display: none;
+  }
+  /* line 121, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper {
+    width: inherit;
+  }
+  /* line 122, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper .main2 .content {
+    width: inherit;
+  }
+  /* line 126, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section {
+    width: inherit;
+  }
+  /* line 129, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section article > h2 {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  /* line 133, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section article div.post {
+    width: inherit;
+  }
+  /* line 136, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section article div.post-options-container {
+    display: inherit;
+  }
+  /* line 140, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section aside {
+    width: inherit;
+  }
+  /* line 142, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section aside > div.about-me > div.my-photo > img {
+    width: 35%;
+  }
+  /* line 147, ../../assets/stylesheets/layout/_grid.scss */
+  body .wrapper section.content {
+    width: inherit;
+    float: none;
+  }
+
+  /* line 153, ../../assets/stylesheets/layout/_grid.scss */
+  .main2 {
+    padding-top: 0px;
+  }
+
+  /* line 156, ../../assets/stylesheets/layout/_grid.scss */
+  .main .post h1.title, .main2 .post h1.title {
+    font-size: 1em;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  /* line 161, ../../assets/stylesheets/layout/_grid.scss */
+  .post .createdAt, .writtenAt {
+    font-size: 11px;
+  }
+
+  /* line 164, ../../assets/stylesheets/layout/_grid.scss */
+  aside {
+    float: none;
+    width: 100% !important;
+  }
+
+  /* line 168, ../../assets/stylesheets/layout/_grid.scss */
+  .about-me .my-photo > img {
+    width: inherit;
+  }
+}
