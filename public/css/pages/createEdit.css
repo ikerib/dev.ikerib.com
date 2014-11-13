@@ -1,0 +1,85 @@
+/* line 6, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container {
+  max-width: 1300px;
+  margin: 5%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 10, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -ms-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+/* line 12, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit input[type=text], .create-edit-container > form.create-edit textarea {
+  border: solid 1px #999999;
+  border-radius: 5px;
+  height: 2.5em;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0 10px;
+  font-size: 0.8em;
+  line-height: 2em;
+}
+/* line 15, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit textarea:nth-child(4) {
+  height: 500px;
+}
+/* line 18, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit textarea:nth-child(6) {
+  margin-bottom: 0;
+}
+/* line 21, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit textarea {
+  resize: vertical;
+}
+/* line 24, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit .all-tags {
+  font-size: 0.7em;
+}
+/* line 27, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container > form.create-edit button.create-edit[type=submit] {
+  padding: 1% 5%;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  margin: 5% 0;
+}
+/* line 31, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container .instructions-container {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  margin: 0 0 0 5%;
+  padding: 0 3%;
+  text-align: justify;
+  line-height: 1.5em;
+}
+/* line 39, ../../../assets/stylesheets/pages/createEdit.scss */
+.create-edit-container .instructions-container .bold {
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+@media all and (min-width: 20em) and (max-width: 61.24em) {
+  /* line 48, ../../../assets/stylesheets/pages/createEdit.scss */
+  .create-edit-container {
+    display: inherit;
+    margin: 0 10% 0 5%;
+  }
+  /* line 51, ../../../assets/stylesheets/pages/createEdit.scss */
+  .create-edit-container .instructions-container {
+    margin: 5% 0;
+    padding: 5%;
+  }
+}
